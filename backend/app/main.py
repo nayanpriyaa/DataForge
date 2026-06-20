@@ -321,3 +321,17 @@ def get_dataset_analytics(
         )
 
     return report.analytics_json
+
+@app.get("/datasets")
+def get_datasets(
+    db: Session = Depends(get_db)
+):
+
+    datasets = (
+        dataset_service
+        .get_all_datasets(
+            db
+        )
+    )
+
+    return datasets

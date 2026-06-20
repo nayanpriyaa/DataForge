@@ -44,3 +44,16 @@ class DatasetRepository:
             )
             .first()
         )
+
+    def find_all(
+    self,
+    db
+):
+
+        return (
+        db.query(Dataset)
+        .order_by(
+            Dataset.id.desc()
+        )
+        .all()
+    )

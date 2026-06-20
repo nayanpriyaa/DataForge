@@ -17,6 +17,7 @@ from "./pages/DashboardPage";
 
 import ProtectedRoute
 from "./components/ProtectedRoute";
+import DatasetDetailsPage from "./pages/DatasetDetailsPage";
 
 export default function App() {
 
@@ -57,6 +58,13 @@ export default function App() {
 
         }
       />
+
+      <Route
+  path="/datasets/:id"
+  element={
+    <DatasetDetailsPage />
+  }
+/>
 
     </Routes>
 

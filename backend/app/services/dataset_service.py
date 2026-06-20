@@ -53,3 +53,12 @@ class DatasetService:
             db,
             dataset
         )
+
+    def get_all_datasets(
+    self,
+    db
+):
+
+       return self.repository.find_all(
+        db
+    )

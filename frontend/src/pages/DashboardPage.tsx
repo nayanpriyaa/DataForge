@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import UploadDataset from "../components/UploadDataset";
+import DatasetList from "../components/DatasetList";
 export default function DashboardPage() {
 
   const navigate =
@@ -43,9 +44,7 @@ export default function DashboardPage() {
 
           <UploadDataset />
 
-          <div className="bg-white p-6 rounded-xl shadow">
-            Analytics
-          </div>
+          <DatasetList />
 
           <div className="bg-white p-6 rounded-xl shadow">
             Quality Reports
